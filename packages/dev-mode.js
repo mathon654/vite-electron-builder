@@ -24,7 +24,7 @@ process.env.MODE = mode;
  */
 const rendererWatchServer = await createServer({
   mode,
-  root: path.resolve('packages/renderer'),
+  root: path.resolve('packages/projectA'),
 });
 
 await rendererWatchServer.listen();
