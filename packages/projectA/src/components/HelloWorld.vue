@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-
+import {versions} from '@app/preload'
+console.log('version',versions)
 defineProps<{ msg: string }>()
 
 const count = ref(0)
