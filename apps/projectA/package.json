@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build --base ./",
-    "preview": "vite preview",
-    "typecheck": "vue-tsc --noEmit"
+    "dev": "node_modules/.bin/vite",
+    "build": "node_modules/.bin/vue-tsc -b && vite build --base ./",
+    "preview": "node_modules/.bin/vite preview",
+    "typecheck": "node_modules/.bin/vue-tsc --noEmit"
   },
   "dependencies": {
     "vue": "^3.5.18"

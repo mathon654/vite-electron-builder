@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'development' || process.env.PLAYWRIGHT_TEST === 't
 
 // noinspection JSIgnoredPromiseFromCall
 /**
- * We resolve '@app/renderer' and '@app/preload'
+ * We resolve '@app/projectA' and '@app/preload'
  * here and not in '@app/main'
  * to observe good practices of modular design.
  * This allows fewer dependencies and better separation of concerns in '@app/main'.
@@ -26,7 +26,7 @@ initApp(
     renderer: (process.env.MODE === 'development' && !!process.env.VITE_DEV_SERVER_URL) ?
       new URL(process.env.VITE_DEV_SERVER_URL)
       : {
-        path: fileURLToPath(import.meta.resolve('@app/renderer')),
+        path: fileURLToPath(import.meta.resolve('@app/projectA')),
       },
 
     preload: {
